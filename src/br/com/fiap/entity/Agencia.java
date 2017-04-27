@@ -1,6 +1,16 @@
 package br.com.fiap.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="T_EX11_AGENCIA")
 public class Agencia {
+	
+	@Id
+	@Column(name="nr_agencia")
 	private int numeroAgencia;
 	private String endereco;
 
