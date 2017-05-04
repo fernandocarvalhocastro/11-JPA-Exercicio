@@ -1,8 +1,17 @@
 package br.com.fiap.entity;
 
-public class ContaCorrente {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="T_CONTA_CORRENTE")
+public class ContaCorrente extends Conta{
+
+	@Column(name="vl_tarifa", nullable=true)
 	private double valorTarifa;
+	
+	@Column(name="vl_cheque_especial")
 	private double chequeEspecial;
 
 	public ContaCorrente() {
